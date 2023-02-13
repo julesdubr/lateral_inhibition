@@ -57,7 +57,7 @@ class LateralInhibition(nn.Module):
 
 class LIBlock(nn.Module):
     def __init__(self, block: BasicBlock):
-        super().__init__()
+        super(LIBlock, self).__init__()
 
         self.block = block
         self.li = LateralInhibition(block.conv1.in_channels)
