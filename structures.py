@@ -60,7 +60,7 @@ class LIBlock(nn.Module):
         super(LIBlock, self).__init__()
 
         self.block = block
-        self.li = LateralInhibition(block.conv1.in_channels)
+        self.li = LateralInhibition(self.block.conv1.in_channels)
 
     def forward(self, x):
         identity = x
